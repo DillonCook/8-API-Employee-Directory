@@ -1,0 +1,132 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-auto-rows: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0 0 3px 0 gray;
+    border-radius: 7px;
+    background-color: rgb(250, 250, 250);
+    width: 400px;
+    transition: transform .4s ease;
+}
+
+.user:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.user-info {
+    margin: auto;
+}
+
+.user-image {
+   width: 120px;
+   height: 120px;
+   margin: auto;
+   border-radius: 50%;
+   border: solid 1px lightgray;
+}
+
+.name {
+    margin: auto;
+    font-size: 1.5em;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+p {
+    margin: 5px 0;
+    text-align: left;
+
+}
+
+h1 {
+    margin-left: 50px;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.phone {
+    margin-top: 10px;
+    display: none;
+}
+.state {
+    text-transform: capitalize;
+}
+.address {
+    display: none;
+    text-transform: capitalize;
+}
+.birthday {
+    display: none;
+}
+
+.modal .phone,
+.modal .address,
+.modal .birthday{
+    display: block;
+    padding: 10px 5px;
+}
+
+.modal .name {
+    margin: 10px 0;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    border-radius: 10px;
+    top: 15%;
+    right: 37%;
+    z-index: 10;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    transition: all .4s ease;
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid lightgray;
+    
+}
+
+.modal h1,
+.modal p {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    font-weight: bold;
+    transition: transform .3s ease;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.close:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+    
+
+
+}
