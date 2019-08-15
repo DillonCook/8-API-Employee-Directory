@@ -38,7 +38,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
       </div>
       `);
 
-
+    //  Cycle through created cards and add event listeners on click to create a modal and a close feature
       let cards = document.querySelectorAll('.user');
 
       cards.forEach(card => {
@@ -59,7 +59,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
     });
   })
 
-// Create modal on click
+// Close modal on "x" click
 
 document.addEventListener('click', (e) => {
   let modal = document.querySelectorAll('.modal');
