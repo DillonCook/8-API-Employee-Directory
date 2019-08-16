@@ -5,8 +5,15 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
     return results.json();
   })
   .then(results => {
-    // console.log(JSON.stringify(results));
     results.results.forEach(person => {
+
+      function formatDate() {
+        var date = new Date(person.dob.date);
+        var month = (date.getMonth() + 1);
+        var day = date.getDate();
+        var year = date.getFullYear();
+        return month + "/" + day + "/" + year;
+    }
 
       let name = `
       <h1 class="name">${person.name.first + " " + person.name.last}</h1>
@@ -27,7 +34,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
         <p class="address">${person.location.street + ", " + person.location.city + ", " + person.location.state + " " + person.location.postcode}</p>
       `;
       let birthday = `
-        <p class="birthday">${"Birthday: " + person.dob.date.slice(0, 10)}</p>
+        <p class="birthday">${"Birthday: " + formatDate()}</p>
       `;
 
 
@@ -58,6 +65,9 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
 
     });
   })
+  .catch(error => {
+    console.log(error);
+  });
 
 // Close modal on "x" click
 
