@@ -45,7 +45,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
       </div>
       `);
 
-    //  Cycle through created cards and add event listeners on click to create a modal and a close feature
+//  Cycle through created cards and add event listeners on click to create a modal and a close feature
       let cards = document.querySelectorAll('.user');
 
       cards.forEach(card => {
@@ -59,7 +59,6 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
           modal.innerHTML = card.innerHTML;
           modal.append(close);
           main.append(modal);
-
         });
       });
 
@@ -70,9 +69,9 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
   });
 
 // Close modal on "x" click
-
 document.addEventListener('click', (e) => {
   let modal = document.querySelectorAll('.modal');
+  let overlay = document.querySelector('body');
   if(e.target.classList == 'close') {
     modal.forEach(mod => {
       mod.style.display = "none";
@@ -81,9 +80,4 @@ document.addEventListener('click', (e) => {
   }
 
 })
-  
-
-
-
-
   
