@@ -6,7 +6,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
   })
   .then(results => {
     results.results.forEach(person => {
-
+      
       function formatDate() {
         var date = new Date(person.dob.date);
         var month = (date.getMonth() + 1);
@@ -31,7 +31,7 @@ fetch('https://randomuser.me/api/?results=12&nat=us,au')
         <p class="phone">${person.cell}</p>
       `;
       let address = `
-        <p class="address">${person.location.street + ", " + person.location.city + ", " + person.location.state + " " + person.location.postcode}</p>
+        <p class="address">${person.location.street.number + ' ' + person.location.street.name + ", " + person.location.city + ", " + person.location.state + " " + person.location.postcode}</p>
       `;
       let birthday = `
         <p class="birthday">${"Birthday: " + formatDate()}</p>
